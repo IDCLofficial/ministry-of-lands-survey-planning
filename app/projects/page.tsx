@@ -164,46 +164,6 @@ export default function Projects() {
                     </div>
                 </div>
             </section>
-
-            {/* Strategic Goals Section */}
-            <section className="py-16 bg-gray-50">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-20">
-                    <div className="text-center mb-10">
-                        <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Strategic Goals</h2>
-                        <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                            The Ministry of Lands, Survey, Housing and Urban Planning is committed to transforming land administration and urban development in Imo State through innovation, transparency, and efficient service delivery.
-                        </p>
-                    </div>
-                    
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        {[
-                            "Digitize 100% of land records through IGIS for transparent and efficient service delivery.",
-                            "Issue 50,000 Certificates of Occupancy annually to property owners across Imo State.",
-                            "Implement comprehensive urban renewal programs in Owerri, Orlu, and Okigwe.",
-                            "Reduce land disputes by 60% through improved surveying and mapping services.",
-                            "Achieve 80% automation of land administration processes within three years.",
-                            "Develop and implement master plans for all major cities in Imo State.",
-                            "Enhance public access to land information through online portals and mobile applications.",
-                            "Train and certify 1,000 professionals in modern land administration practices.",
-                            "Establish a one-stop-shop for all land-related services at the state secretariat.",
-                            "Implement sustainable housing policies to address urban housing deficits."
-                        ].map((goal, index) => (
-                            <AnimatedEntrance 
-                                key={index} 
-                                {...ANIMATION_PRESETS.CARD_FADE_UP} 
-                                delay={0.1 * index}
-                            >
-                                <div className="flex items-start p-4 bg-white rounded-lg shadow-sm">
-                                    <div className="flex-shrink-0 w-8 h-8 rounded-full bg-green-100 flex items-center justify-center mr-4">
-                                        <span className="text-green-600 font-semibold">{index + 1}</span>
-                                    </div>
-                                    <p className="text-gray-700">{goal}</p>
-                                </div>
-                            </AnimatedEntrance>
-                        ))}
-                    </div>
-                </div>
-            </section>
         </div>
     );
 }

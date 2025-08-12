@@ -1,9 +1,9 @@
 import Image from "next/image";
-import { 
-  FaRegEye, FaBullseye, FaEye, FaClipboardCheck, FaShieldHalved, FaUsers,
-  FaBuilding, FaFileContract,
-  FaChartLine, FaHouse, FaMapPin, FaFileSignature, FaLandmark, FaCity,
-  FaTree
+import {
+    FaRegEye, FaBullseye, FaEye, FaClipboardCheck, FaShieldHalved, FaUsers,
+    FaBuilding, FaFileContract,
+    FaChartLine, FaHouse, FaMapPin, FaFileSignature, FaLandmark, FaCity,
+    FaTree
 } from "react-icons/fa6";
 import HeroSection from "../../components/HeroSection";
 import AnimatedEntrance from "../../components/AnimatedEntrance";
@@ -21,13 +21,13 @@ export default function About() {
                 <div className="px-4 sm:px-6 lg:px-20">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16">
                         <AnimatedEntrance {...ANIMATION_PRESETS.IMAGE_FADE_UP} className="order-2 lg:order-1">
-                                <Image
-                                    src="/assets/no-image.png"
-                                    alt="Imo State Ministry of Lands, Survey, Housing and Urban Planning – Overview"
-                                    width={600}
-                                    height={400}
-                                    className="rounded-lg shadow-lg w-full h-auto hover:shadow-xl transition-shadow duration-300"
-                                />
+                            <Image
+                                src="/assets/no-image.png"
+                                alt="Imo State Ministry of Lands, Survey, Housing and Urban Planning – Overview"
+                                width={600}
+                                height={400}
+                                className="rounded-lg shadow-lg w-full h-auto hover:shadow-xl transition-shadow duration-300"
+                            />
                         </AnimatedEntrance>
                         <div className="order-1 lg:order-2">
                             <AnimatedEntrance {...ANIMATION_PRESETS.TEXT_FADE_RIGHT} delay={200}>
@@ -130,13 +130,44 @@ export default function About() {
                 </div>
             </section>
 
+            {/* Commissioner Profile Section */}
+            <section className="py-12 sm:py-16 md:py-20 bg-white">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-20">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
+                        <div className="order-2 lg:order-1">
+                            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4 sm:mb-6">
+                                Chief Barr. Enyinna Victor Onuegbu, KSC
+                            </h2>
+                            <p className="text-lg sm:text-xl text-green-600 font-semibold mb-4 sm:mb-6">
+                                Honourable Commissioner for Lands, Survey and Physical Planning
+                            </p>
+                            <p className="text-sm sm:text-base md:text-lg text-gray-700 leading-relaxed mb-4 sm:mb-6">
+                                Chief Barr. Enyinna Victor Onuegbu, KSC, serves as the Honourable Commissioner for Lands, Survey and Physical Planning in Imo State under the administration of His Excellency, Senator Hope Uzodinma. A distinguished legal practitioner and astute administrator, Barr. Onuegbu brings a wealth of experience in public service and governance to his role.
+                            </p>
+                            <p className="text-sm sm:text-base md:text-lg text-gray-700 leading-relaxed mb-6 sm:mb-8">
+                                Hailing from Umuokoro-Eziama in Ngor Okpala Local Government Area, Barr. Onuegbu is a respected community leader who holds the traditional title of Ebekuodike (Prime Minister) of his community. He is married to Magistrate Uche Onuegbu, and together they are blessed with four children. His career in public service has been marked by a strong commitment to due process, transparency, and the efficient delivery of government services to the people of Imo State.
+                            </p>
+                        </div>
+                        <div className="order-1 lg:order-2">
+                            <Image
+                                src="/assets/no-image.png"
+                                alt="Chief Barr. Enyinna Victor Onuegbu, KSC – Honourable Commissioner for Lands, Survey and Physical Planning"
+                                width={500}
+                                height={600}
+                                className="rounded-lg shadow-lg w-full h-auto"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             {/* Core Responsibilities Section */}
             <section className="py-12 sm:py-16 md:py-20 bg-white">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-20">
                     <div className="text-center mb-8 sm:mb-12 md:mb-16">
-                            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4 sm:mb-6">
-                                Our Core Services
-                            </h2>
+                        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4 sm:mb-6">
+                            Our Core Services
+                        </h2>
                     </div>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
@@ -208,33 +239,42 @@ export default function About() {
                 </div>
             </section>
 
-            {/* Commissioner Profile Section */}
-            <section className="py-12 sm:py-16 md:py-20 bg-gray-50">
+            {/* Strategic Goals Section */}
+            <section className="py-16 bg-gray-50">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-20">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
-                        <div className="order-2 lg:order-1">
-                            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4 sm:mb-6">
-                                Chief Barr. Enyinna Victor Onuegbu, KSC
-                            </h2>
-                            <p className="text-lg sm:text-xl text-green-600 font-semibold mb-4 sm:mb-6">
-                                Honourable Commissioner for Lands, Survey and Physical Planning
-                            </p>
-                            <p className="text-sm sm:text-base md:text-lg text-gray-700 leading-relaxed mb-4 sm:mb-6">
-                                Chief Barr. Enyinna Victor Onuegbu, KSC, serves as the Honourable Commissioner for Lands, Survey and Physical Planning in Imo State under the administration of His Excellency, Senator Hope Uzodinma. A distinguished legal practitioner and astute administrator, Barr. Onuegbu brings a wealth of experience in public service and governance to his role.
-                            </p>
-                            <p className="text-sm sm:text-base md:text-lg text-gray-700 leading-relaxed mb-6 sm:mb-8">
-                                Hailing from Umuokoro-Eziama in Ngor Okpala Local Government Area, Barr. Onuegbu is a respected community leader who holds the traditional title of Ebekuodike (Prime Minister) of his community. He is married to Magistrate Uche Onuegbu, and together they are blessed with four children. His career in public service has been marked by a strong commitment to due process, transparency, and the efficient delivery of government services to the people of Imo State.
-                            </p>
-                        </div>
-                        <div className="order-1 lg:order-2">
-                            <Image
-                                src="/assets/no-image.png"
-                                alt="Chief Barr. Enyinna Victor Onuegbu, KSC – Honourable Commissioner for Lands, Survey and Physical Planning"
-                                width={500}
-                                height={600}
-                                className="rounded-lg shadow-lg w-full h-auto"
-                            />
-                        </div>
+                    <div className="text-center mb-10">
+                        <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Strategic Goals</h2>
+                        <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                            The Ministry of Lands, Survey, Housing and Urban Planning is committed to transforming land administration and urban development in Imo State through innovation, transparency, and efficient service delivery.
+                        </p>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        {[
+                            "Digitize 100% of land records through IGIS for transparent and efficient service delivery.",
+                            "Issue 50,000 Certificates of Occupancy annually to property owners across Imo State.",
+                            "Implement comprehensive urban renewal programs in Owerri, Orlu, and Okigwe.",
+                            "Reduce land disputes by 60% through improved surveying and mapping services.",
+                            "Achieve 80% automation of land administration processes within three years.",
+                            "Develop and implement master plans for all major cities in Imo State.",
+                            "Enhance public access to land information through online portals and mobile applications.",
+                            "Train and certify 1,000 professionals in modern land administration practices.",
+                            "Establish a one-stop-shop for all land-related services at the state secretariat.",
+                            "Implement sustainable housing policies to address urban housing deficits."
+                        ].map((goal, index) => (
+                            <AnimatedEntrance
+                                key={index}
+                                {...ANIMATION_PRESETS.CARD_FADE_UP}
+                                delay={0.1 * index}
+                            >
+                                <div className="flex items-start p-4 bg-white rounded-lg shadow-sm">
+                                    <div className="flex-shrink-0 w-8 h-8 rounded-full bg-green-100 flex items-center justify-center mr-4">
+                                        <span className="text-green-600 font-semibold">{index + 1}</span>
+                                    </div>
+                                    <p className="text-gray-700">{goal}</p>
+                                </div>
+                            </AnimatedEntrance>
+                        ))}
                     </div>
                 </div>
             </section>
@@ -262,8 +302,8 @@ export default function About() {
                                 />
                             </div>
                             <div className="p-6">
-                            <h3 className="text-xl font-bold text-gray-900">Chief Barr. Enyinna Victor Onuegbu, KSC</h3>
-                            <p className="text-green-700 font-medium mt-1">Honourable Commissioner</p>
+                                <h3 className="text-xl font-bold text-gray-900">Chief Barr. Enyinna Victor Onuegbu, KSC</h3>
+                                <p className="text-green-700 font-medium mt-1">Honourable Commissioner</p>
                             </div>
                         </div>
 
