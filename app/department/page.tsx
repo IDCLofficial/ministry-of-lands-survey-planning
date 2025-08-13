@@ -1,28 +1,13 @@
-import AnimatedEntrance from "../../components/AnimatedEntrance";
-import { ANIMATION_PRESETS } from "../../utils/constants/animations";
+import HeroSection from "@/components/HeroSection";
 import TabContentSystem from "../components/TabContentSystem";
+import { HERO_CONFIGS } from "../../utils/constants/heroSections";
 
 export default function Department() {
     return (
         <div className="min-h-screen bg-white">
 
             {/* Hero Section */}
-            <AnimatedEntrance {...ANIMATION_PRESETS.SECTION_FADE_IN}>
-                <section className="relative bg-cover bg-center py-20 md:py-32" style={{ backgroundImage: 'url("/hero_section.png")' }}>
-                    <div className="absolute inset-0 bg-black/20"></div>
-                    <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-20">
-                        <AnimatedEntrance {...ANIMATION_PRESETS.TITLE_FADE_DOWN}>
-                            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
-                                Ministry of Lands, Survey, Housing<br />
-                                and Urban Planning
-                            </h1>
-                            <p className="mt-4 text-xl text-white">
-                                Departments & Agencies
-                            </p>
-                        </AnimatedEntrance>
-                    </div>
-                </section>
-            </AnimatedEntrance>
+            <HeroSection {...HERO_CONFIGS.DEPARTMENT} />    
 
             {/* Main Content Section with Tab System */}
             <TabContentSystem 
@@ -33,7 +18,7 @@ export default function Department() {
                         label: "Land Administration",
                         content: {
                             title: "Department of Land Administration",
-                            imageSrc: "/assets/no-image-lg.jpg",
+                            imageSrc: "/photos/DPT - Imo State Ministry of Lands, Survey, Housing and Urban Planning.jpg",
                             imageAlt: "Department of Land Administration",
                             description: "The Department of Land Administration oversees all land-related matters in Imo State, ensuring transparent and efficient land management systems. The department is responsible for land allocation, title documentation, and the implementation of land policies in line with state regulations.",
                             additionalInfo: [
@@ -50,7 +35,7 @@ export default function Department() {
                         label: "Survey & Mapping",
                         content: {
                             title: "Department of Survey and Mapping",
-                            imageSrc: "/assets/no-image-lg.jpg",
+                            imageSrc: "/photos/DPT - Chief Barr. Enyinna Victor Onuegbu, KSC.jpg",
                             imageAlt: "Department of Survey and Mapping",
                             description: "The Department of Survey and Mapping is responsible for conducting cadastral, topographical, and engineering surveys across Imo State. The department maintains accurate geospatial data and provides mapping services to support land administration and urban planning.",
                             additionalInfo: [
@@ -67,7 +52,7 @@ export default function Department() {
                         label: "Urban & Regional Planning",
                         content: {
                             title: "Department of Urban and Regional Planning",
-                            imageSrc: "/assets/no-image-lg.jpg",
+                            imageSrc: "/photos/Urban DPT - Imo State Ministry of Lands, Survey, Housing and Urban Planning.jpg",
                             imageAlt: "Department of Urban and Regional Planning",
                             description: "The Department of Urban and Regional Planning is responsible for the physical development and spatial organization of urban and rural areas in Imo State. The department formulates and implements policies for sustainable human settlements and infrastructure development.",
                             additionalInfo: [
@@ -84,7 +69,7 @@ export default function Department() {
                         label: "Housing Development",
                         content: {
                             title: "Department of Housing Development",
-                            imageSrc: "/assets/no-image-lg.jpg",
+                            imageSrc: "/photos/Housing DPT - Imo State Ministry of Lands, Survey, Housing and Urban Planning.jpg",
                             imageAlt: "Department of Housing Development",
                             description: "The Department of Housing Development formulates and implements housing policies and programs to meet the shelter needs of Imo State residents. The department promotes affordable housing delivery and public-private partnerships in the housing sector.",
                             additionalInfo: [
@@ -101,7 +86,7 @@ export default function Department() {
                         label: "Development Control",
                         content: {
                             title: "Department of Development Control",
-                            imageSrc: "/assets/no-image-lg.jpg",
+                            imageSrc: "/photos/Development DPT - Imo State Ministry of Lands, Survey, Housing and Urban Planning.jpg",
                             imageAlt: "Department of Development Control",
                             description: "The Department of Development Control ensures compliance with approved physical development plans and building regulations across Imo State. The department enforces development standards and monitors construction activities to maintain orderly urban growth.",
                             additionalInfo: [
@@ -118,7 +103,7 @@ export default function Department() {
                         label: "Documentation & Records",
                         content: {
                             title: "Department of Documentation and Records",
-                            imageSrc: "/assets/no-image-lg.jpg",
+                            imageSrc: "/photos/Documentation DPT - Imo State Ministry of Lands, Survey, Housing and Urban Planning.jpg",
                             imageAlt: "Department of Documentation and Records",
                             description: "The Department of Documentation and Records is responsible for the proper keeping, maintenance, and retrieval of all land and housing records in Imo State. The department ensures the security and integrity of all official documents and facilitates efficient information management.",
                             additionalInfo: [
@@ -135,7 +120,7 @@ export default function Department() {
                         label: "IGIS Services",
                         content: {
                             title: "Imo Geographic Information Service (IGIS)",
-                            imageSrc: "/assets/no-image-lg.jpg",
+                            imageSrc: "/photos/IGIS DPT - Imo State Ministry of Lands, Survey, Housing and Urban Planning.png",
                             imageAlt: "Imo Geographic Information Service (IGIS)",
                             description: "The Imo Geographic Information Service (IGIS) is responsible for digitizing land records, managing geospatial data, and providing land registry services. Established under the Imo State Lands Administration and Geographic Information Service Law 2021, IGIS enhances transparency and efficiency in land administration.",
                             additionalInfo: [
@@ -152,7 +137,7 @@ export default function Department() {
                         label: "Legal Services",
                         content: {
                             title: "Department of Legal Services",
-                            imageSrc: "/assets/no-image-lg.jpg",
+                            imageSrc: "/photos/Legal DPT - Imo State Ministry of Lands, Survey, Housing and Urban Planning.jpg",
                             imageAlt: "Department of Legal Services",
                             description: "The Department of Legal Services provides legal advisory and support services to the Ministry on all land and housing matters. The department handles litigation, contract vetting, and ensures compliance with land administration laws and regulations in Imo State.",
                             additionalInfo: [
@@ -169,7 +154,7 @@ export default function Department() {
                         label: "Finance & Accounts",
                         content: {
                             title: "Department of Finance and Accounts",
-                            imageSrc: "/assets/no-image-lg.jpg",
+                            imageSrc: "/photos/Finance DPT - Imo State Ministry of Lands, Survey, Housing and Urban Planning.jpg",
                             imageAlt: "Department of Finance and Accounts",
                             description: "The Department of Finance and Accounts manages the financial resources of the Ministry, ensuring proper budgeting, accounting, and financial reporting. The department oversees revenue collection from land transactions and ensures compliance with financial regulations.",
                             additionalInfo: [
@@ -186,7 +171,7 @@ export default function Department() {
                         label: "Admin & HR",
                         content: {
                             title: "Department of Administration and Human Resources",
-                            imageSrc: "/assets/no-image-lg.jpg",
+                            imageSrc: "/photos/Admin HR DPT - Imo State Ministry of Lands, Survey, Housing and Urban Planning.jpg",
                             imageAlt: "Department of Administration and Human Resources",
                             description: "The Department of Administration and Human Resources is responsible for the effective management of the Ministry's human capital and administrative functions. The department ensures smooth operations through efficient personnel management and administrative support services.",
                             additionalInfo: [

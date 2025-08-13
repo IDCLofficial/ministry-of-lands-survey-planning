@@ -65,12 +65,12 @@ export default function TabContentSystem({ tabs, className = "" }: TabContentSys
                             <div className="flex-1">
                                 <h2 className="text-3xl font-bold text-gray-900 mb-6">{activeContent.title}</h2>
                                 <div className="mb-8">
-                                    <div className="w-full h-[360px] md:h-[420px] relative rounded-lg overflow-hidden mb-6">
+                                    <div className="w-full h-[400px] md:h-[420px] relative rounded-lg overflow-hidden mb-6">
                                         <Image 
                                             src={activeContent.imageSrc}
                                             alt={activeContent.imageAlt}
                                             fill
-                                            className="object-cover"
+                                            className="object-cover object-top"
                                         />
                                     </div>
                                     <p className="text-gray-700 leading-relaxed mb-6">

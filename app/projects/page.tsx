@@ -16,7 +16,8 @@ const SPECIAL_PROJECTS = [
         location: "Statewide Implementation",
         category: "Land Administration",
         status: "Ongoing",
-        partners: "IGIS, Local Government Areas, Traditional Rulers"
+        partners: "IGIS, Local Government Areas, Traditional Rulers",
+        imageSrc: "/photos/Land Titling & Regularization Program.jpg",
     },
     {
         number: 2,
@@ -25,7 +26,8 @@ const SPECIAL_PROJECTS = [
         location: "Imo State Secretariat, Owerri",
         category: "Digital Transformation",
         status: "Active",
-        partners: "IGIS, Ministry of Digital Economy"
+        partners: "IGIS, Ministry of Digital Economy",
+        imageSrc: "/photos/Digital Land Registry Implementation.jpg",
     },
     {
         number: 3,
@@ -34,7 +36,8 @@ const SPECIAL_PROJECTS = [
         location: "Owerri, Orlu, Okigwe",
         category: "Urban Development",
         status: "Ongoing",
-        partners: "Owerri Capital Development Authority, Local Communities"
+        partners: "Owerri Capital Development Authority, Local Communities",
+        imageSrc: "/photos/Urban Renewal & Slum Upgrading Initiative.jpg",
     }
 ];
 
@@ -89,11 +92,11 @@ export default function Projects() {
                                 <div className="bg-white border border-gray-200 h-full rounded-lg overflow-hidden hover:shadow-lg transition-all duration-300">
                                     <div className="h-48 bg-green-50 flex items-center justify-center overflow-hidden">
                                         <Image
-                                            src={'/assets/no-image-lg.jpg'}
+                                            src={project.imageSrc || '/assets/no-image-lg.jpg'}
                                             alt={project.title}
                                             width={400}
                                             height={200}
-                                            className="object-cover w-full h-full"
+                                            className="object-cover w-full h-full object-top"
                                         />
                                     </div>
                                     <div className="p-6">
@@ -148,15 +151,11 @@ export default function Projects() {
                             For the latest updates, follow us on our social media platforms or check back regularly.
                         </p>
                         <div className="flex justify-center space-x-4">
-                            <a href="#" className="text-gray-500 hover:text-green-600 transition-colors">
+                            <a href="https://www.facebook.com/groups/2651111925105005/" className="text-gray-500 hover:text-green-600 transition-colors">
                                 <span className="sr-only">Facebook</span>
                                 <FaFacebookF className="h-6 w-6" />
                             </a>
-                            <a href="#" className="text-gray-500 hover:text-green-600 transition-colors">
-                                <span className="sr-only">X (Twitter)</span>
-                                <FaXTwitter className="h-6 w-6" />
-                            </a>
-                            <a href="#" className="text-gray-500 hover:text-green-600 transition-colors">
+                            <a href="https://www.instagram.com/imostatemedia/?hl=en" className="text-gray-500 hover:text-green-600 transition-colors">
                                 <span className="sr-only">Instagram</span>
                                 <FaInstagram className="h-6 w-6" />
                             </a>

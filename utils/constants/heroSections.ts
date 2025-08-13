@@ -18,6 +18,13 @@ export const HERO_CONFIGS = {
     height: 'extra-large' as const,
     alignment: 'left' as const
   },
+
+  DEPARTMENT: {
+    title: "Ministry of Lands, Survey, Housing and Urban Planning",
+    subtitle: "Departments & Agencies",
+    height: 'medium' as const,
+    alignment: 'left' as const
+  },
   
   PROJECTS: {
     title: "Our Development Initiatives",
@@ -39,7 +46,6 @@ export const HERO_CONFIGS = {
     description: "The Ministry of Lands, Survey, Housing and Urban Planning offers comprehensive land administration services, including C of O issuance, land allocation, survey services, urban planning, and development control to support sustainable growth in Imo State.",
     height: 'medium' as const,
     alignment: 'left' as const,
-    overlay: false
   },
   
   NEWS: {

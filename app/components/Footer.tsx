@@ -170,14 +170,11 @@ export default function Footer() {
                                         Block 7, Imo State Secretariat, Port Harcourt Road, PMB 1532, Owerri, Imo State, Nigeria
                                     </p>
                                     <div className="flex space-x-4 mt-2">
-                                        <a href="https://facebook.com/imonigerdelta" target="_blank" rel="noopener noreferrer" className="hover:text-green-300 transition-colors duration-300 cursor-pointer">
+                                        <a href="https://www.facebook.com/groups/2651111925105005/" target="_blank" rel="noopener noreferrer" className="hover:text-green-300 transition-colors duration-300 cursor-pointer">
                                             Facebook
                                         </a>
-                                        <a href="https://twitter.com/imonigerdelta" target="_blank" rel="noopener noreferrer" className="hover:text-green-300 transition-colors duration-300 cursor-pointer">
-                                            Twitter
-                                        </a>
-                                        <a href="https://linkedin.com/company/imonigerdelta" target="_blank" rel="noopener noreferrer" className="hover:text-green-300 transition-colors duration-300 cursor-pointer">
-                                            LinkedIn
+                                        <a href="https://www.instagram.com/imostatemedia/?hl=en" target="_blank" rel="noopener noreferrer" className="hover:text-green-300 transition-colors duration-300 cursor-pointer">
+                                            Instagram
                                         </a>
                                     </div>
                                 </div>
@@ -187,7 +184,7 @@ export default function Footer() {
 
                     <AnimatedEntrance {...ANIMATION_PRESETS.SECTION_FADE_IN} delay={600}>
                         <div className="border-t border-gray-600 mt-8 sm:mt-10 md:mt-12 pt-4 sm:pt-6 md:pt-8 text-center">
-                            <p className="text-gray-300 text-sm sm:text-base hover:text-white transition-colors duration-300">Imo State Government</p>
+                            <p className="text-gray-300 text-sm sm:text-base hover:text-white transition-colors duration-300">Powered by <span className="text-green-500 font-semibold">Imo State Digital City</span></p>
                         </div>
                     </AnimatedEntrance>
                 </div>

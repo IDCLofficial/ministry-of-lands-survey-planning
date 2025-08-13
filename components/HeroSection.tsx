@@ -20,7 +20,7 @@ const HeroSection = ({
   title,
   subtitle,
   description,
-  backgroundImage = '/hero_section.png',
+  backgroundImage = '/photos/Imo State.jpeg',
   backgroundGradient,
   height = 'medium',
   alignment = 'left',
@@ -79,7 +79,7 @@ const HeroSection = ({
 
       {/* Overlay */}
       {overlay && (
-        <div className="absolute inset-0 bg-black/20"></div>
+        <div className="absolute inset-0 bg-black/80"></div>
       )}
 
       {/* Content */}

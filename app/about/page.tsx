@@ -22,11 +22,11 @@ export default function About() {
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16">
                         <AnimatedEntrance {...ANIMATION_PRESETS.IMAGE_FADE_UP} className="order-2 lg:order-1">
                             <Image
-                                src="/assets/no-image.png"
+                                src="/photos/About - MINISTRY OF LANDS, SURVEY & PHYSICAL PLANNING.jpg"
                                 alt="Imo State Ministry of Lands, Survey, Housing and Urban Planning – Overview"
                                 width={600}
                                 height={400}
-                                className="rounded-lg shadow-lg w-full h-auto hover:shadow-xl transition-shadow duration-300"
+                                className="rounded-lg shadow-lg w-full md:h-full h-[400px] object-top object-cover hover:shadow-xl transition-shadow duration-300"
                             />
                         </AnimatedEntrance>
                         <div className="order-1 lg:order-2">
@@ -150,7 +150,7 @@ export default function About() {
                         </div>
                         <div className="order-1 lg:order-2">
                             <Image
-                                src="/assets/no-image.png"
+                                src="/photos/Barr. Enyinnaya  Onuegbu Honorable Commiissioner for Lands, Survey and Physical Planning.jpeg"
                                 alt="Chief Barr. Enyinna Victor Onuegbu, KSC – Honourable Commissioner for Lands, Survey and Physical Planning"
                                 width={500}
                                 height={600}
@@ -292,34 +292,34 @@ export default function About() {
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 lg:gap-12">
                         {/* Honourable Commissioner */}
                         <div className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 transition-all hover:shadow-xl">
-                            <div className="h-64 bg-gray-100 overflow-hidden">
+                            <div className="aspect-[3.8/4] bg-gray-100 overflow-hidden">
                                 <Image
-                                    src="/assets/no-image.png"
-                                    alt="Chief Barr. Enyinna Victor Onuegbu, KSC – Honourable Commissioner for Lands, Survey and Physical Planning"
+                                    src="/photos/Barr. Enyinnaya  Onuegbu Honorable Commiissioner for Lands, Survey and Physical Planning.jpeg"
+                                    alt="Barr. Enyinnaya  Onuegbu Honorable Commiissioner for Lands, Survey and Physical Planning"
                                     width={400}
                                     height={400}
-                                    className="w-full h-full object-cover"
+                                    className="w-full h-full object-cover object-top"
                                 />
                             </div>
                             <div className="p-6">
-                                <h3 className="text-xl font-bold text-gray-900">Chief Barr. Enyinna Victor Onuegbu, KSC</h3>
+                                <h3 className="text-xl font-bold text-gray-900">Chief `Barr. Enyinna Victor Onuegbu, KSC</h3>
                                 <p className="text-green-700 font-medium mt-1">Honourable Commissioner</p>
                             </div>
                         </div>
 
                         {/* Permanent Secretary */}
                         <div className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 transition-all hover:shadow-xl">
-                            <div className="h-64 bg-gray-100 overflow-hidden">
+                            <div className="aspect-[3.8/4] bg-gray-100 overflow-hidden">
                                 <Image
-                                    src="/assets/no-image.png"
-                                    alt="[To be provided]"
+                                    src="/photos/OHIRI ANGELINA A PERMANENT SECRETARY (CD) MINISTRY OF LANDS, SURVEY & PHYSICAL PLANNING.jpeg"
+                                    alt="OHIRI ANGELINA A PERMANENT SECRETARY (CD) MINISTRY OF LANDS, SURVEY & PHYSICAL PLANNING"
                                     width={400}
                                     height={400}
-                                    className="w-full h-full object-cover"
+                                    className="w-full h-full object-cover object-top    "
                                 />
                             </div>
                             <div className="p-6">
-                                <h3 className="text-xl font-bold text-gray-900">[To be provided]</h3>
+                                <h3 className="text-xl font-bold text-gray-900 capitalize">OHIRI ANGELINA A</h3>
                                 <p className="text-green-700 font-medium mt-1">Permanent Secretary</p>
                             </div>
                         </div>
@@ -341,7 +341,7 @@ export default function About() {
                         </div>
                         <div>
                             <Image
-                                src="/assets/no-image-lg.jpg"
+                                src="/photos/MINISTRY OF LANDS, SURVEY & PHYSICAL PLANNING..jpg"
                                 alt="Ministry of Lands, Survey, Housing and Urban Planning - Organizational Structure"
                                 width={600}
                                 height={400}

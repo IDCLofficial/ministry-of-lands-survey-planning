@@ -30,7 +30,7 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 md:gap-12 items-center">
             <AnimatedEntrance {...ANIMATION_PRESETS.IMAGE_FADE_UP} className="order-2 lg:order-1">
                 <Image
-                  src="/assets/no-image.png"
+                  src="/photos/Chief Barr. Enyinna Victor Onuegbu, KSC and His Excellency, Senator (Dr.) Hope Uzodimma CON GSSRS.jpg"
                   alt="Imo State Ministry of Lands, Survey, Housing and Urban Planning – Overview"
                   width={600}
                   height={400}
@@ -92,7 +92,7 @@ export default function Home() {
             <div className="flex-1 order-1 lg:order-2">
               <AnimatedEntrance {...ANIMATION_PRESETS.IMAGE_FADE_UP}>
                   <Image
-                    src="/assets/no-image.png"
+                    src="/photos/Chief Barr. Enyinna Victor Onuegbu, KSC in Office.jpg"
                     alt="Chief Barr. Enyinna Victor Onuegbu, KSC – Honourable Commissioner for Lands, Survey, Housing and Urban Planning"
                     width={500}
                     height={600}
@@ -204,27 +204,27 @@ export default function Home() {
             </p>
           </AnimatedEntrance>
           <div className="grid justify-center grid-cols-[repeat(auto-fill,minmax(150px,1fr))] gap-6 sm:gap-8 items-center">
-            {[{ name: 'IGIS', logo: '/assets/no-image.png' },
-              { name: 'Imo Housing Corporation', logo: '/assets/no-image.png' },
-              { name: 'OCDA', logo: '/assets/no-image.png' },
-              { name: 'Ministry of Works', logo: '/assets/no-image.png' },
-              { name: 'NITP', logo: '/assets/no-image.png' },
+            {[{ name: 'Imo Geographic Information Service (IGIS)', logo: '/photos/Imo Geographic Information Service (IGIS).avif' },
+              { name: 'Imo Housing Corporation', logo: '/photos/Imo Housing Corporation.jpg' },
+              { name: 'OCDA', logo: '/photos/OCDA.png' },
+              { name: 'Ministry of Works', logo: '/assets/ng-logo.png' },
+              { name: 'NITP', logo: '/photos/NITP.png' },
             ].map((partner, index) => (
               <AnimatedEntrance
                 key={partner.name}
                 {...ANIMATION_PRESETS.CARD_FADE_UP}
                 delay={STAGGER_DELAYS.MEDIUM[index % STAGGER_DELAYS.MEDIUM.length]}
-                className="flex items-center justify-center"
+                className="flex items-stretch justify-center"
               >
-                <div className="text-center hover:transform hover:scale-110 transition-all duration-300 cursor-pointer">
-                  <div className="bg-white p-2 rounded-lg shadow-sm">
+                <div className="text-center w-full flex items-center justify-center hover:transform hover:scale-110 transition-all duration-300 cursor-pointer h-24">
+                  <div className="bg-white p-2 rounded-lg shadow-sm w-full h-full">
                     <CustomImage
                       src={partner.logo}
                       alt={`Partner ${partner.name}`}
                       width={100}
                       title={`Partner ${partner.name}`}
                       height={60}
-                      className="w-full h-auto object-contain"
+                      className="w-auto h-full object-contain mx-auto"
                     />
                   </div>
                 </div>
