@@ -125,13 +125,13 @@ export default function Contact() {
                                         </div>
                                         <h3 className="text-xl font-bold text-gray-900 mb-2">Socials</h3>
                                         <div className="flex space-x-3 text-white">
-                                            <a href="https://facebook.com/ImoStateGovt" target="_blank" rel="noopener noreferrer" className="w-8 h-8 bg-green-500 rounded flex items-center justify-center hover:bg-green-600 transition-colors">
+                                            <a href="#" target="_blank" rel="noopener noreferrer" className="w-8 h-8 bg-green-500 rounded flex items-center justify-center hover:bg-green-600 transition-colors">
                                                 <FaSquareFacebook />
                                             </a>
-                                            <a href="https://twitter.com/ImoStateGovt" target="_blank" rel="noopener noreferrer" className="w-8 h-8 bg-green-500 rounded flex items-center justify-center hover:bg-green-600 transition-colors">
+                                            <a href="#" target="_blank" rel="noopener noreferrer" className="w-8 h-8 bg-green-500 rounded flex items-center justify-center hover:bg-green-600 transition-colors">
                                                 <FaTwitter />
                                             </a>
-                                            <a href="https://instagram.com/ImoStateGovt" target="_blank" rel="noopener noreferrer" className="w-8 h-8 bg-green-500 rounded flex items-center justify-center hover:bg-green-600 transition-colors">
+                                            <a href="#" target="_blank" rel="noopener noreferrer" className="w-8 h-8 bg-green-500 rounded flex items-center justify-center hover:bg-green-600 transition-colors">
                                                 <FaInstagram />
                                             </a>
                                         </div>
@@ -146,8 +146,8 @@ export default function Contact() {
                                         </div>
                                         <h3 className="text-xl font-bold text-gray-900 mb-2">Email</h3>
                                         <div className="space-y-1">
-                                            <a href="mailto:[To be provided]" className="block text-blue-600 hover:text-blue-800 transition-colors duration-300">
-                                                [To be provided]
+                                            <a href="mailto:info@imostate.gov.ng" className="block text-blue-600 hover:text-blue-800 transition-colors duration-300">
+                                                info@imostate.gov.ng
                                             </a>
                                         </div>
                                     </div>
@@ -261,7 +261,7 @@ export default function Contact() {
                                         {errors.message && <p id="message-error" className="mt-2 text-sm text-red-600">{errors.message}</p>}
                                     </div>
                                     <div className="flex items-center">
-                                        <input type="checkbox" id="not-robot" name="not-robot" className="h-4 w-4 text-green-600 focus:ring-green-500 border-gray-300 rounded" />
+                                        <input type="checkbox" required id="not-robot" name="not-robot" className="h-4 w-4 text-green-600 focus:ring-green-500 border-gray-300 rounded" />
                                         <label htmlFor="not-robot" className="ml-2 block text-sm text-gray-700">
                                             I&apos;m not a robot
                                         </label>

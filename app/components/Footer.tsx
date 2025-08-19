@@ -170,10 +170,10 @@ export default function Footer() {
                                         Block 7, Imo State Secretariat, Port Harcourt Road, PMB 1532, Owerri, Imo State, Nigeria
                                     </p>
                                     <div className="flex space-x-4 mt-2">
-                                        <a href="https://www.facebook.com/groups/2651111925105005/" target="_blank" rel="noopener noreferrer" className="hover:text-green-300 transition-colors duration-300 cursor-pointer">
+                                        <a href="#" target="_blank" rel="noopener noreferrer" className="hover:text-green-300 transition-colors duration-300 cursor-pointer">
                                             Facebook
                                         </a>
-                                        <a href="https://www.instagram.com/imostatemedia/?hl=en" target="_blank" rel="noopener noreferrer" className="hover:text-green-300 transition-colors duration-300 cursor-pointer">
+                                        <a href="#" target="_blank" rel="noopener noreferrer" className="hover:text-green-300 transition-colors duration-300 cursor-pointer">
                                             Instagram
                                         </a>
                                     </div>
