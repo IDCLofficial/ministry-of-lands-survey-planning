@@ -302,7 +302,7 @@ export default function About() {
                                 />
                             </div>
                             <div className="p-6">
-                                <h3 className="text-xl font-bold text-gray-900">Chief `Barr. Enyinna Victor Onuegbu, KSC</h3>
+                                <h3 className="text-xl font-bold text-gray-900">Chief Barr. Enyinna Victor Onuegbu, KSC</h3>
                                 <p className="text-green-700 font-medium mt-1">Honourable Commissioner</p>
                             </div>
                         </div>
