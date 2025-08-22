@@ -82,7 +82,7 @@ export default function Footer() {
             {/* Footer */}
             <footer className="bg-[#4A5568] text-white pb-8 sm:pb-12 md:pb-16 pt-16 sm:pt-24 md:pt-32">
                 <div className="px-4 sm:px-6 lg:px-20">
-                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 md:gap-12">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 md:gap-12">
                         {/* Logo and Description */}
                         <AnimatedEntrance {...ANIMATION_PRESETS.CARD_FADE_UP} delay={STAGGER_DELAYS.MEDIUM[0]}>
                             <div className="sm:col-span-2 md:col-span-1">
@@ -122,19 +122,6 @@ export default function Footer() {
                             </div>
                         </AnimatedEntrance>
 
-                        <AnimatedEntrance {...ANIMATION_PRESETS.CARD_FADE_UP} delay={STAGGER_DELAYS.MEDIUM[2]}>
-                            <div>
-                                <h4 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4 md:mb-6 text-white relative">
-                                    Services
-                                    <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-green-500 transition-all duration-300 group-hover:w-full"></div>
-                                </h4>
-                                <ul className="space-y-2 sm:space-y-3">
-                                    <li><Link href="/media" className="text-gray-300 hover:text-green-300 hover:translate-x-1 transition-all duration-300 text-sm sm:text-base inline-block">Media</Link></li>
-                                    <li><Link href="/news" className="text-gray-300 hover:text-green-300 hover:translate-x-1 transition-all duration-300 text-sm sm:text-base inline-block">News</Link></li>
-                                    <li><Link href="/contact" className="text-gray-300 hover:text-green-300 hover:translate-x-1 transition-all duration-300 text-sm sm:text-base inline-block">Contact Us</Link></li>
-                                </ul>
-                            </div>
-                        </AnimatedEntrance>
 
                         {/* Newsletter Signup */}
                         <AnimatedEntrance {...ANIMATION_PRESETS.CARD_FADE_UP} delay={STAGGER_DELAYS.MEDIUM[3]}>
@@ -165,7 +152,7 @@ export default function Footer() {
                                 <div className="mt-4 sm:mt-6 space-y-1 sm:space-y-2 text-xs sm:text-sm text-gray-300 grid">
                                     <a href="tel:+2348035066722" className="hover:text-green-300 transition-colors duration-300 cursor-pointer">+234 803 506 6722</a>
                                     <a href="tel:+2348038704368" className="hover:text-green-300 transition-colors duration-300 cursor-pointer">+234 803 870 4368</a>
-                                    <a href="mailto:[To be provided]" className="hover:text-green-300 transition-colors duration-300 cursor-pointer">[To be provided]</a>
+                                    <a href="mailto:info@landsurvey.im.gov" className="hover:text-green-300 transition-colors duration-300 cursor-pointer">info@landsurvey.im.gov</a>
                                     <p className="leading-relaxed hover:text-gray-200 transition-colors duration-300">
                                         Block 7, Imo State Secretariat, Port Harcourt Road, PMB 1532, Owerri, Imo State, Nigeria
                                     </p>
@@ -184,7 +171,7 @@ export default function Footer() {
 
                     <AnimatedEntrance {...ANIMATION_PRESETS.SECTION_FADE_IN} delay={600}>
                         <div className="border-t border-gray-600 mt-8 sm:mt-10 md:mt-12 pt-4 sm:pt-6 md:pt-8 text-center">
-                            <p className="text-gray-300 text-sm sm:text-base hover:text-white transition-colors duration-300">Powered by <span className="text-green-500 font-semibold">Imo State Digital City</span></p>
+                            <p className="text-gray-300 text-sm sm:text-base hover:text-white transition-colors duration-300">Powered by <a href="https://imodigitalcity.com/" target="_blank" rel="noopener noreferrer" className="text-green-500 font-semibold hover:text-green-400 transition-colors duration-300">Imo Digital City</a></p>
                         </div>
                     </AnimatedEntrance>
                 </div>

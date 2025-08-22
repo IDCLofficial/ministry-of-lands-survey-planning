@@ -13,9 +13,10 @@ export default function Contact() {
         email: "",
         subject: "",
         message: "",
+        captcha: false
     });
     const [errors, setErrors] = useState<
-        Partial<Record<"name" | "company" | "phone" | "email" | "subject" | "message", string>>
+        Partial<Record<"name" | "company" | "phone" | "email" | "subject" | "message" | "captcha", string>>
     >({});
     const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -37,11 +38,11 @@ export default function Contact() {
     const validate = useCallback((values: typeof formValues) => {
         const nextErrors: Partial<Record<keyof typeof formValues, string>> = {};
         if (!values.name.trim()) nextErrors.name = "Name is required";
-        if (!values.email.trim()) nextErrors.email = "Email is required";
-        else if (!/^\S+@\S+\.\S+$/.test(values.email)) nextErrors.email = "Enter a valid email";
+        if (!values.email.trim() || !/^\S+@\S+\.\S+$/.test(values.email)) nextErrors.email = "Enter a valid email";
         if (values.phone && !/^[\d\s()+-]{7,20}$/.test(values.phone)) nextErrors.phone = "Enter a valid phone";
         if (!values.subject.trim()) nextErrors.subject = "Subject is required";
         if (!values.message.trim() || values.message.trim().length < 10) nextErrors.message = "Message should be at least 10 characters";
+        if (!values.captcha) nextErrors.captcha = "Please verify that you are not a robot";
         return nextErrors;
     }, []);
 
@@ -58,7 +59,7 @@ export default function Contact() {
             try {
                 await new Promise((resolve) => setTimeout(resolve, 1200));
                 toast.success("Message sent successfully!");
-                setFormValues({ name: "", company: "", phone: "", email: "", subject: "", message: "" });
+                setFormValues({ name: "", company: "", phone: "", email: "", subject: "", message: "", captcha: false });
                 setErrors({});
             } finally {
                 setIsSubmitting(false);
@@ -260,11 +261,22 @@ export default function Contact() {
                                         ></textarea>
                                         {errors.message && <p id="message-error" className="mt-2 text-sm text-red-600">{errors.message}</p>}
                                     </div>
-                                    <div className="flex items-center">
-                                        <input type="checkbox" required id="not-robot" name="not-robot" className="h-4 w-4 text-green-600 focus:ring-green-500 border-gray-300 rounded" />
-                                        <label htmlFor="not-robot" className="ml-2 block text-sm text-gray-700">
-                                            I&apos;m not a robot
-                                        </label>
+                                    <div>
+                                        <div className="flex items-center">
+                                            <input
+                                                type="checkbox"
+                                                id="captcha"
+                                                name="captcha"
+                                                checked={formValues.captcha}
+                                                onChange={(e) => setFormValues(prev => ({ ...prev, captcha: e.target.checked }))}
+                                                className="h-4 w-4 text-green-600 focus:ring-green-500 border-gray-300 rounded"
+                                                required
+                                            />
+                                            <label htmlFor="captcha" className="ml-2 block text-sm text-gray-700">
+                                                I&apos;m not a robot
+                                            </label>
+                                        </div>
+                                        {errors.captcha && <p className="mt-2 text-sm text-red-600">{errors.captcha}</p>}
                                     </div>
                                     <div className="pt-2">
                                         <button

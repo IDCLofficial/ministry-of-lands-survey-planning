@@ -44,6 +44,6 @@ export const NAV_LINKS: NavLink[] = [
 
 export const CONTACT_INFO = {
   address: "Block 7, Imo State Secretariat, Port Harcourt Road, PMB 1532, Owerri, Imo State, Nigeria",
-  email: "[To be provided]",
+  email: "info@landsurvey.im.gov",
   phone: "+234 803 506 6722",
 };
