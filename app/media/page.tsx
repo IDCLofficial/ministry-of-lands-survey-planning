@@ -1,33 +1,61 @@
+import { Suspense } from "react";
 import HeroSection from "../../components/HeroSection";
 import MediaSection from "../../components/MediaSection";
 import { HERO_CONFIGS } from "../../utils/constants/heroSections";
 
-export default function Media() {
+interface PageProps {
+    searchParams: Promise<{ [key: string]: string }>
+}
+
+function MediaSkeleton() {
+    return (
+        <div className="container mx-auto px-4 py-8">
+            <div className="animate-pulse">
+                {/* Filter buttons skeleton */}
+                <div className="flex flex-wrap gap-2 mb-8">
+                    {[...Array(4)].map((_, i) => (
+                        <div key={i} className="h-10 w-20 bg-gray-200 rounded"></div>
+                    ))}
+                </div>
+                
+                {/* Media grid skeleton */}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {[...Array(6)].map((_, i) => (
+                        <div key={i} className="space-y-3">
+                            <div className="aspect-video bg-gray-200 rounded-lg"></div>
+                            <div className="h-4 bg-gray-200 rounded w-3/4"></div>
+                            <div className="h-3 bg-gray-200 rounded w-1/2"></div>
+                        </div>
+                    ))}
+                </div>
+                
+                {/* Pagination skeleton */}
+                <div className="flex justify-center mt-8">
+                    <div className="flex space-x-2">
+                        {[...Array(5)].map((_, i) => (
+                            <div key={i} className="h-10 w-10 bg-gray-200 rounded"></div>
+                        ))}
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+}
+
+export default async function Media({ searchParams }: PageProps) {
+    const { viewing, page } = await searchParams;
+
+    const pageNumber = parseInt(page) || 1;
+
     return (
         <div className="min-h-screen bg-white">
             {/* Hero Section */}
-            <HeroSection {...HERO_CONFIGS.MEDIA}>
-                {/* Search Bar */}
-                <div className="max-w-2xl">
-                    <div className="flex">
-                        <input
-                            type="text"
-                            placeholder="Search..."
-                            disabled
-                            className="flex-1 px-6 py-4 rounded-l-full text-gray-700 bg-gray-100 cursor-not-allowed opacity-60"
-                        />
-                        <button 
-                            disabled
-                            className="bg-gray-400 text-white px-8 py-4 rounded-r-full font-semibold cursor-not-allowed opacity-60"
-                        >
-                            Search
-                        </button>
-                    </div>
-                </div>
-            </HeroSection>
+            <HeroSection {...HERO_CONFIGS.MEDIA} />
 
             {/* Media Gallery Section */}
-            <MediaSection mediaItems={[]} />
+            <Suspense fallback={<MediaSkeleton />}>
+                <MediaSection currentlyViewing={viewing} page={pageNumber.toString()} />
+            </Suspense>
         </div>
     );
 }
