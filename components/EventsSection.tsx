@@ -17,6 +17,17 @@ interface TransformedEvent {
   imageUrl: string;
   detailsUrl: string;
 }
+
+// Hardcoded Imo Economic Summit 2025 event
+const HARDCODED_EVENT: TransformedEvent = {
+  id: 'imo-economic-summit-2025',
+  title: 'Imo Economic Summit 2025',
+  description: 'A powerful gathering of leaders, investors, and visionaries ready to unlock new opportunities for growth and innovation. From digital transformation to agriculture, education, energy, and youth empowerment, this summit is where ideas meet investment — and where the future of Imo\'s economy takes shape.',
+  date: 'December 4-5, 2025',
+  location: 'Owerri, Imo State',
+  imageUrl: '/event-imo.jpeg',
+  detailsUrl: '/imo-economic-summit-2025?id=imo-economic-summit-2025'
+};
     
 interface EventsSectionProps {
   page?: string;
@@ -126,8 +137,11 @@ const EmptyState: React.FC = () => {
 // };
 
 export default async function EventsSection({ page = "1" }: EventsSectionProps) {
-  const events = await fetchEvents(parseInt(page));
-  const eventCount = await getEventCount(ministryId);
+  const eventsData = await fetchEvents(parseInt(page));
+
+  // Always prepend the hardcoded event to the list
+  const events = [HARDCODED_EVENT, ...eventsData];
+  const eventCount = await getEventCount(ministryId) + 1; // Add 1 for hardcoded event
 
   const hasEvents = events && events.length > 0;
 

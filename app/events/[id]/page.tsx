@@ -7,6 +7,34 @@ import { contentfulService } from "@/utils/contentful";
 import { Events } from "@/utils/contentful/types";
 import MarkdownRenderer from "@/app/components/MarkdownRenderer";
 import { getRelativeTime } from "@/utils";
+import Link from "next/link";
+
+// Hardcoded Imo Economic Summit 2025 event data
+const HARDCODED_EVENT_DATA: Events = {
+    sys: {
+        id: 'imo-economic-summit-2025'
+    },
+    fields: {
+        eventName: 'Imo Economic Summit 2025',
+        briefDescription: 'A powerful gathering of leaders, investors, and visionaries ready to unlock new opportunities for growth and innovation.',
+        fullDescription: `## About the Summit\n\nOn December 4–5, Imo State will host a powerful gathering of leaders, investors, and visionaries ready to unlock new opportunities for growth and innovation.\n\nFrom digital transformation to agriculture, education, energy, and youth empowerment, this summit is where ideas meet investment — and where the future of Imo's economy takes shape.\n\n## Key Focus Areas\n\n- **Digital Transformation**: Leveraging technology for economic growth\n- **Agriculture**: Modernizing farming and agribusiness\n- **Education**: Building skills for tomorrow's workforce\n- **Energy**: Sustainable power solutions\n- **Youth Empowerment**: Creating opportunities for the next generation\n\n## Contact Information\n\nFor more information, please contact us at info@imoeconomicsummit.com\n\nLet's shape Imo's tomorrow, together. 💪`,
+        eventDate: '2025-12-04T09:00:00.000Z',
+        location: 'Owerri, Imo State',
+        contactPhoneNumber: '+234 803 610 1044',
+        bannerImage: {
+            fields: {
+                file: {
+                    url: '/event-imo.jpeg'
+                }
+            }
+        } as any,
+        ministry: {
+            fields: {
+                ministryName: 'Ministry of Lands, Survey and Planning'
+            }
+        } as any
+    }
+} as Events;
 
 interface PageProps {
     params: Promise<{ id: string }>;
@@ -15,6 +43,11 @@ interface PageProps {
 
 const getEventData = async (id: string): Promise<Events | null> => {
     try {
+        // Check if this is the hardcoded event
+        if (id === 'imo-economic-summit-2025') {
+            return HARDCODED_EVENT_DATA;
+        }
+        
         const event = await contentfulService.getEventById(id);
         return event;
     } catch (error) {
@@ -26,6 +59,9 @@ const getEventData = async (id: string): Promise<Events | null> => {
 
 const buildImageUrl = (imageField: Events["fields"]["firstSpeakerPicture"]): string | null => {
     const url = imageField?.fields?.file?.url;
+    if (url && url.startsWith('/') && !url.startsWith('//')) {
+        return url;
+    }
     return url ? `https:${url}` : null;
 };
 
@@ -61,14 +97,27 @@ const EventDetails = ({ event }: { event: Events }) => {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-20">
                     <h2 className="text-2xl font-bold text-gray-900 mb-8">EVENT DETAILS</h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                        {details.map((detail) => (
-                            <div key={detail.label}>
-                                <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-2">
-                                    {detail.label}
-                                </h3>
-                                <p className="text-gray-900">{detail.value}</p>
-                            </div>
-                        ))}
+                        {details.map((detail) => {
+                            const isPhone = detail.label === 'PHONE:';
+                            
+                            return (
+                                <div key={detail.label}>
+                                    <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-2">
+                                        {detail.label}
+                                    </h3>
+                                    {isPhone ? (
+                                        <Link 
+                                            href={`tel:${detail.value}`} 
+                                            className="text-gray-900 hover:text-green-600 transition-colors underline"
+                                        >
+                                            {detail.value}
+                                        </Link>
+                                    ) : (
+                                        <p className="text-gray-900">{detail.value}</p>
+                                    )}
+                                </div>
+                            );
+                        })}
                     </div>
                 </div>
             </section>
