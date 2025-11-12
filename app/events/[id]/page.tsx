@@ -27,12 +27,12 @@ const HARDCODED_EVENT_DATA: Events = {
                     url: '/event-imo.jpeg'
                 }
             }
-        } as any,
+        } as unknown,
         ministry: {
             fields: {
                 ministryName: 'Ministry of Lands, Survey and Planning'
             }
-        } as any
+        } as unknown
     }
 } as Events;
 
