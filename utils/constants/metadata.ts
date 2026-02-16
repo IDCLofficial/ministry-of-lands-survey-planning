@@ -72,6 +72,22 @@ export const SITE_METADATA: Metadata = {
       },
     ],
   },
+
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  verification: {
+    google: '_7c1t_i-UsjS1_BD_kE-vsXMUak-mgMUnIT91dEUEQ4',
+  },
+
   themeColor: [
     { media: '(prefers-color-scheme: light)', color: '#15803d' },
     { media: '(prefers-color-scheme: dark)', color: '#15803d' },
