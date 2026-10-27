@@ -32,6 +32,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <script
+          src="https://pulse-track.onrender.com/tracker.min.js"
+          data-key="pk_live_59d48e2d7e5b10e4eb6fc8ec"
+          defer
+        />
+      </head>
       <body
         className={`${poppinsSans.variable} ${poppinsMono.variable} antialiased relative bg-white`}
       >
