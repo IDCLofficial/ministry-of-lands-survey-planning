@@ -4,6 +4,14 @@ import { HERO_CONFIGS } from "../../utils/constants/heroSections";
 import { Suspense } from "react";
 import AnimatedEntrance from "../../components/AnimatedEntrance";
 import { ANIMATION_PRESETS } from "../../utils/constants/animations";
+import { pageMetadata } from "@/lib/seo";
+
+export const metadata = pageMetadata({
+  title: "Events",
+  description: "Events organised by the Ministry of Lands, Survey & Planning, Imo State Government.",
+  path: "/events",
+});
+
 
 interface PageProps {
     searchParams: Promise<{ [key: string]: string }>

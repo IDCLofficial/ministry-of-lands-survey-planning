@@ -2,6 +2,14 @@ import { Suspense } from "react";
 import HeroSection from "../../components/HeroSection";
 import MediaSection from "../../components/MediaSection";
 import { HERO_CONFIGS } from "../../utils/constants/heroSections";
+import { pageMetadata } from "@/lib/seo";
+
+export const metadata = pageMetadata({
+  title: "Media Gallery",
+  description: "Photo and media gallery of the Ministry of Lands, Survey & Planning, Imo State Government.",
+  path: "/media",
+});
+
 
 interface PageProps {
     searchParams: Promise<{ [key: string]: string }>

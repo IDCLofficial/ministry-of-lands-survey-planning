@@ -4,6 +4,14 @@ import AnimatedEntrance from "../../components/AnimatedEntrance";
 import { ANIMATION_PRESETS, STAGGER_DELAYS } from "../../utils/constants/animations";
 import { FaUsers, FaShieldHalved, FaLeaf, FaHandshake } from 'react-icons/fa6';
 import { FaHandsHelping } from 'react-icons/fa';
+import { pageMetadata } from "@/lib/seo";
+
+export const metadata = pageMetadata({
+  title: "Services",
+  description: "Services offered by the Ministry of Lands, Survey & Planning of the Imo State Government.",
+  path: "/services",
+});
+
 
 export default function Services() {
     return (

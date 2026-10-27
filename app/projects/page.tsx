@@ -13,6 +13,14 @@ import ProjectsLoadingSkeleton from "./loading";
 import EmptyState from "../../components/EmptyState";
 import Pagination from "@/components/Pagination";
 import { slugify } from "@/utils";
+import { pageMetadata } from "@/lib/seo";
+
+export const metadata = pageMetadata({
+  title: "Projects",
+  description: "Projects and programmes of the Ministry of Lands, Survey & Planning, Imo State Government.",
+  path: "/projects",
+});
+
 
 interface DisplayProject {
     id: string;

@@ -6,6 +6,14 @@ import NewsContent from "@/components/NewsContent";
 import SearchSection from "@/components/SearchSection";
 import SearchLoadingSkeleton from "@/components/SearchLoadingSkeleton";
 import { Suspense } from "react";
+import { pageMetadata } from "@/lib/seo";
+
+export const metadata = pageMetadata({
+  title: "News",
+  description: "Latest news, announcements and updates from the Ministry of Lands, Survey & Planning, Imo State.",
+  path: "/news",
+});
+
 
 interface PageProps {
     searchParams: Promise<{ [key: string]: string }>

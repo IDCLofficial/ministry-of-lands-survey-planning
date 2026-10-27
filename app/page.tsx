@@ -8,6 +8,14 @@ import { ANIMATION_PRESETS, STAGGER_DELAYS } from "../utils/constants/animations
 import { FaLightbulb, FaHandsHolding, FaUsers } from "react-icons/fa6";
 import Link from "next/link";
 import CustomImage from "./components/CustomImage";
+import { pageMetadata } from "@/lib/seo";
+
+export const metadata = pageMetadata({
+  title: { absolute: "Ministry of Lands, Survey & Planning | Imo State Government" },
+  description: "Official website of the Ministry of Lands, Survey & Planning, Imo State Government: services, departments, projects, news and events.",
+  path: "/",
+});
+
 
 export default function Home() {
   return (
