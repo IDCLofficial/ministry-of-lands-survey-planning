@@ -11,8 +11,8 @@ import CustomImage from "./components/CustomImage";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
-  title: { absolute: "Ministry of Lands, Survey & Planning | Imo State Government" },
-  description: "Official website of the Ministry of Lands, Survey & Planning, Imo State Government: services, departments, projects, news and events.",
+  title: { absolute: "Imo State Ministry of Lands, Survey, Housing and Urban Planning" },
+  description: "Land administration in Imo State: Certificate of Occupancy (C of O), land allocation, survey and mapping, urban planning, development control and housing.",
   path: "/",
 });
 

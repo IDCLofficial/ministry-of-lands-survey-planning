@@ -10,7 +10,7 @@ import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
   title: "News",
-  description: "Latest news, announcements and updates from the Ministry of Lands, Survey & Planning, Imo State.",
+  description: "Latest news, announcements and updates from the Ministry of Lands, Survey, Housing and Urban Planning, Imo State.",
   path: "/news",
 });
 

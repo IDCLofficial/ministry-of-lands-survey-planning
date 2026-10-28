@@ -7,8 +7,8 @@ import { FaHandsHelping } from 'react-icons/fa';
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
-  title: "Services",
-  description: "Services offered by the Ministry of Lands, Survey & Planning of the Imo State Government.",
+  title: "Land Administration, Survey and Planning Services",
+  description: "C of O issuance, land allocation, ownership verification, survey and mapping, physical planning, land use charge and digital land services in Imo State.",
   path: "/services",
 });
 

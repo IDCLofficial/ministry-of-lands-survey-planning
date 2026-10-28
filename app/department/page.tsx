@@ -5,7 +5,7 @@ import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
   title: "Departments",
-  description: "Departments and units of the Ministry of Lands, Survey & Planning, Imo State Government.",
+  description: "Departments and units of the Ministry of Lands, Survey, Housing and Urban Planning, Imo State Government.",
   path: "/department",
 });
 

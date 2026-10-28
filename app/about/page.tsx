@@ -13,7 +13,7 @@ import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
   title: "About Us",
-  description: "About the Ministry of Lands, Survey & Planning of the Imo State Government: who we are and what we do.",
+  description: "The statutory body for land administration, urban spatial planning and housing policy in Imo State, working with IGIS to digitise land records.",
   path: "/about",
 });
 
